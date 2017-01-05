@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "outDir": "./built/",
+        "allowJs": true,
+        "sourceMap": false,
+        "noImplicitAny": true,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true, 
+        "allowUnreachableCode": false,
+        "allowUnusedLabels": false,
+        "module": "amd",
+        "target": "es5"
+    },
+    "include": [
+        "./src/**/*"
+    ]
+}

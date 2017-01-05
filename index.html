@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Azure DocumentDB Emulator</title>
+
+    <script src="externals/require.js"></script>
+    <script src="built/require-config.js"></script>
+    <script src="externals/jquery.js"></script>
+    <script src="externals/documentdbclient-1.6.0.js"></script>
+    <script src="externals/vs/loader.js"></script>    <script src="externals/bootstrap.js"></script>
+
+    <link rel="stylesheet" href="externals/bootstrap.css" />
+    <link rel="stylesheet" href="css/DocumentDB.css" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+
+    <style>
+        .error
+        {
+            border: 2px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header - Start -->
+    <div class="header HeaderBg">
+
+        <!-- Logo - Start -->
+        <div class="items">
+            <img class="DocDBicon" src="images/documentDBLogo.svg" />
+            <span class="title">DocumentDB Emulator</span>
+        </div>
+        <!-- Logo - End  end-->
+
+        <!-- Main Tabs - Start -->
+        <div class="divmenuquickstartpadding">
+            <a id="Quickstart" href="#"><span class="menuQuickStart activemenuitems activemenu">Quickstart</span></a>
+            <a id="Explorer" href="#"><span class="menuExplorer activemenuitems">Explorer</span></a> 
+            <a href="mailto:askdocdb@microsoft.com?subject=DocumentDB%20Emulator%20Feedback"><span class="menuExplorer">Feedback</span></a>
+            <a href="https://aka.ms/documentdbcreate" target="_blank" class="createdocdbacnt">CREATE A DOCUMENTDB ACCOUNT<img class="rightarrowimg" src="images/Arrow.svg" /></a>
+        </div>
+        <!-- Main Tabs - End -->
+
+    </div>
+    <!-- Header - End -->    
+
+    <!-- Quickstart - Start -->
+    <div id="divQuickStart">
+        <div class="row Introlines">
+            <p class="Introline1">Congratulations! Your DocumentDB emulator is running.</p>
+            <p class="Introline2">Now, let's connect a sample app to it.</p>
+            <p class="Introline3"><b>Choose a platform</b></p>
+        </div>
+        <div class="container-fluid">
+            <ul class="nav nav-tabs qslevel">
+                <li class="active"><a data-toggle="tab" href="#net"><img class="qsmenuicons" src="images\dotnet.png">.NET</a></li>
+                <li><a data-toggle="tab" href="#corenet"><img class="qsmenuicons" src="images\dotnet.png">.NET Core</a></li>
+                <li><a data-toggle="tab" href="#Java"><img class="qsmenuicons" src="images\java.png">Java</a></li>
+                <li><a data-toggle="tab" href="#NodeJs"><img class="qsmenuicons" src="images\nodejs.png">Node.Js</a></li>
+                <li><a data-toggle="tab" href="#Python"><img class="qsmenuicons" src="images\python.png">Python</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="net" class="tab-pane fade in active">
+                    <div class="row step1">
+                        <div class="numbersize">1</div>
+                        <div class="numberheading">Open and run a sample .NET app
+                            <p>We created a sample .NET app connected to your DocumentDB Emulator instance. Download, extract, build and run the app.</p>
+                            <a href="quickstart/DocumentDB-Quickstart-DotNet.zip"><button class="btncreatecoll">Download</button></a>
+                        </div>
+                    </div>
+
+                    <hr class="hrline">
+
+                    <div class="row step1">
+                        <div class="numbersize">2</div>
+                        <div class="numberheading">Learn more about DocumentDB
+                            <ul>
+                                <li><a target="_blank" class="atags" href="https://docs.microsoft.com/azure/documentdb/documentdb-dotnet-samples">Code Samples</a></li>
+                                <li><a target="_blank" class="atags" href="https://docs.microsoft.com/azure/documentdb/documentdb-nosql-local-emulator">Documentation</a></li>
+                                <li><a target="_blank" class="atags" href="https://azure.microsoft.com/pricing/details/documentdb/">Pricing</a></li>
+                                <li><a target="_blank" class="atags" href="https://www.documentdb.com/capacityplanner">Capacity Planner</a></li>
+                                <li><a target="_blank" class="atags" href="http://stackoverflow.com/questions/tagged/azure-documentdb">Forum</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="corenet" class="tab-pane fade">
+                    <div class="row step1">
+                        <div class="numbersize">1</div>
+                        <div class="numberheading">Open and run a sample .NET Core app
+                            <p>We created a sample .NET Core app connected to your DocumentDB Emulator instance. Download, extract, build and run the app.</p>
+                            <a href="quickstart/DocumentDB-Quickstart-DotNetCore.zip"><button class="btncreatecoll">Download</button></a>
+                        </div>
+                    </div>
+                    <hr class="hrline">
+                    <div class="row step1">
+                        <div class="numbersize">2</div>
+                        <div class="numberheading">Learn more about DocumentDB.
+                            <ul>
+                                <li><a target="_blank" class="atags" href="https://docs.microsoft.com/azure/documentdb/documentdb-dotnet-samples">Code Samples</a></li>
+                                <li><a target="_blank" class="atags" href="https://docs.microsoft.com/azure/documentdb/documentdb-nosql-local-emulator">Documentation</a></li>
+                                <li><a target="_blank" class="atags" href="https://azure.microsoft.com/pricing/details/documentdb/">Pricing</a></li>
+                                <li><a target="_blank" class="atags" href="https://www.documentdb.com/capacityplanner">Capacity Planner</a></li>
+                                <li><a target="_blank" class="atags" href="http://stackoverflow.com/questions/tagged/azure-documentdb">Forum</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="Java" class="tab-pane fade">
+                    <div class="row step1">
+                        <div class="numbersize">1</div>
+                        <div class="numberheading">Open and run a sample Java app
+                            <p>We created a sample Java app connected to your DocumentDB Emulator instance. Download, extract, build and run the app.</p>
+                            <a href="quickstart/DocumentDB-Quickstart-Java.zip"><button class="btncreatecoll">Download</button></a>
+                            <p>
+                                Follow instructions in the readme.md to setup prerequisites needed to run Java web apps, if you haven’t already.
+                            </p>
+                        </div>
+                    </div>
+                    <hr class="hrline">
+                    <div class="row step1">
+                        <div class="numbersize">2</div>
+                        <div class="numberheading">Learn more about DocumentDB.
+                            <ul>
+                                <!--<li><a target="_blank" class="atags" href="https://docs.microsoft.com/azure/documentdb/documentdb-java-samples">Code Samples</a></li>-->
+                                <li><a target="_blank" class="atags" href="https://docs.microsoft.com/azure/documentdb/documentdb-nosql-local-emulator">Documentation</a></li>
+                                <li><a target="_blank" class="atags" href="https://azure.microsoft.com/pricing/details/documentdb/">Pricing</a></li>
+                                <li><a target="_blank" class="atags" href="https://www.documentdb.com/capacityplanner">Capacity Planner</a></li>
+                                <li><a target="_blank" class="atags" href="http://stackoverflow.com/questions/tagged/azure-documentdb">Forum</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="NodeJs" class="tab-pane fade">
+                    <div class="row step1">
+                        <div class="numbersize">1</div>
+                        <div class="numberheading">
+                            Open and run a sample Node.js app
+                            <p>
+                                We created a sample Node.js app connected to your DocumentDB Emulator instance. Download, extract, build and run the app.
+                            </p>
+                            <a href="quickstart/DocumentDB-Quickstart-NodeJs.zip"><button class="btncreatecoll">Download</button></a>
+                            <p>Run <strong>npm install</strong> and <strong>npm start</strong>, and navigate to <a href="http://localhost:3000"
+                                    _targe="blank">http://localhost:3000</a>.</p>
+                        </div>
+                    </div>
+                    <hr class="hrline">
+                    <div class="row step1">
+                        <div class="numbersize">2</div>
+                        <div class="numberheading">Learn more about DocumentDB.
+                            <ul>
+                                <li><a target="_blank" class="atags" href="https://docs.microsoft.com/azure/documentdb/documentdb-nodejs-samples">Code Samples</a></li>
+                                <li><a target="_blank" class="atags" href="https://docs.microsoft.com/azure/documentdb/documentdb-nosql-local-emulator">Documentation</a></li>
+                                <li><a target="_blank" class="atags" href="https://azure.microsoft.com/pricing/details/documentdb/">Pricing</a></li>
+                                <li><a target="_blank" class="atags" href="https://www.documentdb.com/capacityplanner">Capacity Planner</a></li>
+                                <li><a target="_blank" class="atags" href="http://stackoverflow.com/questions/tagged/azure-documentdb">Forum</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="Python" class="tab-pane fade">
+                    <div class="row step1">
+                        <div class="numbersize">1</div>
+                        <div class="numberheading">Create a new Python app.
+                            <p>
+                                Follow this <a href="https://azure.microsoft.com/documentation/articles/documentdb-python-application/"
+                                    target="_blank">tutorial</a> to create a new Python app connected to DocumentDB.
+                            </p>
+                        </div>
+                    </div>
+                    <hr class="hrline">
+                    <div class="row step1">
+                        <div class="numbersize">2</div>
+                        <div class="numberheading">Learn more about DocumentDB.
+                            <ul>
+                                <li><a target="_blank" class="atags" href="https://docs.microsoft.com/azure/documentdb/documentdb-python-samples">Code Samples</a></li>
+                                <li><a target="_blank" class="atags" href="https://docs.microsoft.com/azure/documentdb/documentdb-nosql-local-emulator">Documentation</a></li>
+                                <li><a target="_blank" class="atags" href="https://azure.microsoft.com/pricing/details/documentdb/">Pricing</a></li>
+                                <li><a target="_blank" class="atags" href="https://www.documentdb.com/capacityplanner">Capacity planner</a></li>
+                                <li><a target="_blank" class="atags" href="https://social.msdn.microsoft.com/forums/azure/home?forum=AzureDocumentDB">Forum</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Quickstart - End -->
+
+    <!-- Explorer - Start -->
+    <div id="divExplorer" style="display:none;">
+        <!-- Command Bar - Start -->
+        <div class="commandBar">
+            <span class="command" data-bind="click: addCollection"><img class="commandIcon" src="images/Add.svg">ADD COLLECTION</span>
+            <span class="command" style="display:none"><img class="commandIcon" src="images/CreateQuery.svg">CREATE NEW QUERY</span>
+            <span class="command" style="display:none"><img class="commandIcon" src="images/OpenQuery.svg">OPEN QUERIES</span>
+        </div>
+        <!-- Command Bar - End -->
+        
+        <!-- Left Pane - Start -->
+        <div>
+            <!-- Left Pane Expanded - Start -->
+            <div id="main" class="main activescreen" data-bind="visible: explorer.isLeftPaneExpanded()">
+                <!-- Collections Window - - Start -->
+                <div id="mainslide">
+                    <!-- Collections Window Title/Command Bar - Start -->
+                    <div class="collectiontitle">
+                        <div class="coltitle">
+                            <span class="titlepadcol">
+                                Collections
+                            </span>
+                            <div style="float: right; margin-right: 5px;">
+                                <span class="padimgcolrefresh" data-bind="click: refreshCollections">
+                                    <img class="refreshcol" src="images/refresh.svg" />
+                                </span>
+                                <span class="padimgcolrefresh" data-bind="click: explorer.toggleLeftPaneExpanded">
+                                    <img class="refreshcol" src="images/imgarrowlefticon.svg" >
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Collections Window Title/Command Bar - End  -->
+
+                    <!-- Collections Tree - Start -->                  
+                    <div id="divTreeMenu" class="tree well" data-bind="visible: explorer.isTreeExpanded()">
+                        <ul data-bind="foreach: explorer.databases">
+                            <li id="litree" class="parent_li">
+                                <span class="spanparent" data-bind="click: $data.click">
+                                    <img class="imgarrowstyle" id="imgarrow0" src="images/sort-down.svg" data-bind="visible: $data.collectionsVisible" />
+                                    <img class="imgarrowstyle" id="imgarrow0" src="images/sort-right.svg" data-bind="visible: !$data.collectionsVisible()" />
+                                    <img class="imgdocdb" src="images/documentDBLogo.svg" />
+                                    <div class="itemsContainers" id="spandbstyle"><!--ko text: $data.id--><!--/ko--></div>
+                                </span>
+                                <div data-bind="visible: $data.collectionsVisible">
+                                    <ul data-bind="foreach: $data.collections">
+                                        <li id="lisubtree">
+                                            <span id="col1" class="spanchild" data-bind="click: $data.click">
+                                            <img class="imgdoccol" src="images/DocumentDBCollectionsIcon.svg" />
+                                            <div id="spancolstyle">
+                                                <!--ko text: $data.id--><!--/ko-->
+                                            </div>
+                                        </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>                    
+                    <!-- Collections Tree - End -->
+
+                </div>
+                <!--  Collections Window - End  -->
+
+            </div>
+            <!-- Left Pane Expanded - End -->
+
+            <!-- Left Pane Collapsed - Start -->
+            <div id="mini" class="mini toggle-mini activescreen" data-bind="visible: !explorer.isLeftPaneExpanded()">
+                <div class="main-nav nav">
+                    <ul class="nav">
+                        <li><a href="#" data-bind="click: toggleLeftPaneExpanded"><img src="images/imgarrowlefticon.svg" style="-webkit-transform: rotate(-90deg) translateX(-100%); width:16px;height:16px; margin: -32px 0 0 0;"></a></li>
+                        <li><a href="#" data-bind="click: toggleLeftPaneExpanded"><span data-bind="text: selectedCollectionId"></span></a></li>
+                        <li><a href="#" data-bind="click: toggleLeftPaneExpanded"><span data-bind="text: selectedDatabaseId"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Left Pane Collapsed - End -->
+        </div>
+        <!-- Left Pane - End -->
+
+        <!-- Opened Tabs - Start -->
+        <div>
+            <!-- Document Explorer - Start -->
+            <div id="content" class="content">
+
+                <div class="contentdiv">
+                    <ul class="nav nav-tabs level">
+                        <li class="active" style="float:left;"><a data-toggle="tab" id="atabName">Documents</a></li>
+                    </ul>
+
+                    <br />
+
+                    <!-- Command Bar - Start -->
+                    <div class="spanmenupaddingleft">
+                        <span class="spanmenu" data-bind="click: refreshCollection">
+                            <img id="imgiconwidth" src="images/refresh.svg" /> Refresh
+                        </span>
+                    </div>
+                    <hr class="hrline">
+                    <!-- Command Bar - End -->
+                </div>
+
+                <div class="tab-content tabdocuments" id="tabdocuments">
+
+                    <div class="row">
+                        <!-- Document Ids - Start -->
+                        <div class="col-md-2" class="tabdocuments">
+                            <table class="table table-hover">
+                                <thead id=' + dbname + '>
+                                    <tr>
+                                        <th>Id</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tbodycontent">
+                                    <!-- ko foreach: $root.explorer.selectedCollectionIds -->
+                                    <tr data-bind="click: $data.click" class="pointer">
+                                        <td>
+                                            <a data-bind="text: $data.id"></a>
+                                        </td>
+                                    </tr>
+                                    <!-- /ko -->
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- Document Ids - End -->
+
+                        <!-- Editor - Start -->
+                        <div class="col-md-10" id="divcontent" class="tabdocuments">
+                            <div id="container" style="height:100vh;border-left :1px solid #d6d7d8;"></div>
+                        </div>
+                        <!-- Editor - End -->
+                    </div>
+                </div>
+            </div>
+            <!-- Document Explorer - End -->
+        </div>
+        <!-- Opened Tabs - End -->
+
+        <!-- Filter Pane Start-->
+        <div class="filter-info">
+            <div class="filter-info-in">
+                <div class="firstdivbg">
+                    <div class="headerline">Filter</div>
+                </div>
+                <div class="seconddivbg">
+                    <div class="paddingspan">
+                        SELECT * FROM c WHERE
+                        <br />
+                        <textarea class="queryclr" type="text" name="COLLECTION ID" rows="3" cols="53" data-bind="value: explorer.filter_predicate"></textarea>
+                    </div>
+                    <div class="paddingspan">
+                        <button class="btncreatecoll1" data-bind="click: explorer.onClickFilterInfo">Filter</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Filter Pane End-->
+
+        <!-- Add Collection Pane - Start -->
+        <div class="addcollection-info" data-bind="visible: explorer.addCollectionPane.visible">
+            <form data-bind="submit: addCollection_submit">
+                <div class="addcollection-info-in">
+                    <div class="firstdivbg">
+                        <div class="headerline">Add Collection</div>
+                    </div>
+                    <div class="seconddivbg">
+                        <div class="paddingspan2">
+                            <p>COLLECTION ID</p>
+                            <div class="textfontclr">
+                                <input type="text" class="collid" name="COLLECTION ID"  data-bind="value: explorer.addCollectionPane.collectionId">
+                            </div>
+                        </div>
+                        <hr>
+                        <div id="divparticionmode">
+                            <div class="paddingpartition">
+                                <p>COLLECTION TYPE</p>
+                                <div id="tab" class="btn-group" data-toggle="buttons-radio">
+                                    <a href="#SinglePartition" class="btn btn-large btn-info active" data-toggle="tab">Single Partition</a>
+                                    <a href="#MultiplePartition" class="btn btn-large btn-info" data-toggle="tab">Multiple Partitions</a>
+                                </div>
+
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="SinglePartition">
+                                        <p>400 - 10000 RU/s * </p>
+                                        <p>10 GB * </p>
+                                    </div>
+                                    <div class="tab-pane" id="MultiplePartition">
+                                        <p>10100 - 250000 RU/s *</p>
+                                        <p>250 GB * </p>
+                                        PARTITION KEY
+                                        <div class="textfontclr">
+                                            <input type="text" class="collid" name="partitionkey" size="52" maxlength="20" data-bind="textInput: explorer.addCollectionPane.partitionkey">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="paddingspan3">
+                            <p>DATABASE</p>
+                            <label><input type="radio" name="database" value="new" data-bind="checked: explorer.addCollectionPane.newOrExisitngDatabase"> Create New<br> </label>
+                            <label><input type="radio" name="database" value="old" data-bind="checked: explorer.addCollectionPane.newOrExisitngDatabase"> Use Existing<br> </label>
+                        </div>
+                        <div class="paddingspan2">
+                            <div class="textfontclr colldisplay" data-bind="visible: explorer.addCollectionPane.newOrExisitngDatabase() === 'new'">
+                                <input class="collid" type="text" name="COLLECTION ID" size="52" maxlength="20" data-bind="textInput: explorer.addCollectionPane.newDatabaseName">
+                            </div>
+
+                            <div class="paddingspan5" data-bind="visible: explorer.addCollectionPane.newOrExisitngDatabase() === 'old'">
+                                <select class="dropdownbtn dropdwndisplay" data-bind="options: explorer.databasesIds, value: explorer.addCollectionPane.selectedExisitingDatabaseName"></select>
+                            </div>
+                        </div>
+
+                        <div class="paddingspan3" style="position: absolute; width:100%; height: 100px; bottom: 125px; border-top:solid 1px white;">
+                            <input type="submit" value="Ok" class="btncreatecoll1" >
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- Add Collection Pane - End -->
+    </div>
+    <!-- Explorer - End -->
+
+    <script>
+        require(["built/Program"]);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,819 @@
+html {
+    font-family: 'Segoe UI' !important;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;  
+}
+
+body {
+    font-family: 'Segoe UI';  
+}
+
+/* layout styles*/
+
+.main {
+    width: 15%;
+    float: left;
+    transition: all .0s ease-in-out;
+    -webkit-transition: all 0s ease-in-out;
+    -moz-transition: all .0s ease-in-out;
+    height: 100vh;
+    background-color: white;
+    border-right: solid 1px lightgray;
+}
+
+.mini {
+    width: 0%;
+    float: left;
+    transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    height: 100vh;
+    background-color: white;
+    border-right: solid 1px lightgray;
+}
+
+.toggle-left {
+    width: 0%;
+    overflow: hidden;
+}
+
+.content {
+    width: 85%;
+    float: left;
+    transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    height: 100vh;
+}
+
+.toggle-minicontent {
+    width: 98%;
+}
+
+.toggle-maincontent {
+    width: 85%;
+}
+
+.toggle-filtermaincontent {
+    width: 80%;
+}
+
+.toggle-filterminicontent {
+    width: 88%;
+}
+
+.toggle-mini {
+    width: 2%;
+}
+
+.toggle-main {
+    width: 15%;
+}
+
+.toggle-filter {
+    width: 10%;
+}
+
+/*filter blade*/
+.filter-info {
+    display: none;
+    transform: translateX(0px);
+    right: 0 !important;
+    left: auto;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    right: auto;
+    z-index: 1000 !important;
+    -webkit-align-self: auto !important;
+    -ms-flex-item-align: auto !important;
+    align-self: auto !important;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    width: 20%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    outline: none;
+    background-color: #1a1a1a;
+}
+
+.partitionmode{
+      display: inline;
+      border: none;
+      border-radius: 0px;
+      color:white;   
+}
+
+.partitionmode:hover{
+    color:white;   
+    background-color: #00abec;
+}
+
+.activepartitionmode{
+    background-color: #00abec;
+}
+
+.paddingpartition{
+    color:white;
+    padding-left: 20px;
+    padding-top: 25px;
+    
+}
+.paddingspan2{
+    padding-top: 20px;
+    color:white;
+    padding-left: 20px;
+}
+.paddingspan4{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color:white;
+    padding-left: 20px;
+}
+.whitegroove{
+    width: 344px;
+    border: groove;
+}
+
+.filter-info-in {
+    background-color: #1a1a1a;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    left: auto;
+    right: -200px;
+}
+.dropdownbtn{
+    color: white;
+    width: 340px;
+    background: #262626;
+}
+.queryclr{
+    color: white;
+    background: #262626;
+}
+.addcollection-info {
+    display: none;
+    transform: translateX(0px);
+    right: 0 !important;
+    left: auto;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    right: auto;
+    z-index: 1000 !important;
+    -webkit-align-self: auto !important;
+    -ms-flex-item-align: auto !important;
+    align-self: auto !important;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    width: 20%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    outline: none;
+    background-color: #1a1a1a;
+}
+
+.addcollection-info-in {
+    background-color: #262626 !important;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    left: auto;
+    right: -200px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.btncreatecoll1{
+    background: #00abec;
+    color:white;
+    padding: 0 40px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.btnpricepad{
+    margin-left: 24px;
+}
+.collid{
+   color: white;
+   background: #262626;
+   width: 340;
+}
+.textfontclr{
+    color: white;
+}
+
+.firstdivbg {
+    background: #1a1a1a !important;
+    height: 90px;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.seconddivbg {
+    background-color: #262626;
+    height: 870px;
+}
+/*  Will be adding these styles when intergrated with portal
+.Pricingtier{
+   padding: 15px 0;
+   padding-top: 15px;
+   padding-bottom: 15px;
+   margin-left: 20px;
+   color: white;
+   font-size: 14px;
+   cursor: pointer;
+}
+
+.hrlinecoll{
+    color: #ddd;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      margin: 0 20px;
+}
+
+.paddingspan1 :hover{
+ background: #515151;
+ width: 345px;
+}
+
+*/
+
+.pricingtierimg{
+    padding-left: 20px;
+    padding-top:10px;
+    padding-bottom: 20px;
+}
+.headerline {
+    color: white;
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+.arrowprice{
+    margin-left: 230px;
+}
+
+.paddingspan {
+    padding: 20px;
+    color: white;
+    font-size: 14px;
+}
+.paddingspan3{
+    padding-top:20px;
+    padding-left: 20px;
+    color: white;
+    font-size: 14px;
+}
+.paddingspan4{
+    padding-top:20px;
+    padding-left: 20px;
+    color: white;
+    font-size: 14px;
+}
+label{
+    white-space: nowrap;
+    font: 12px arial;
+}
+/*filter blade*/
+
+/* End layout styles*/
+
+/*Quick start styles start*/
+
+.Introlines{
+    padding-top: 40px;
+    padding-left: 40px;
+}
+.Introline1{
+    font-size: 16px;
+}
+
+.Introline2{
+    font-size: 12px;
+    padding-top: 10px;
+}
+
+.Introline3{
+    padding-top: 10px;
+}
+
+/*this style is responsible for tab menu nav and common for mini slide bar nav also-- start*/
+.nav > li > a {
+    color: black;
+    font-weight: 400;
+}
+ /*end*/
+
+.qslevel {
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+.numbersize{
+ font-size: 60px;
+ display: inline;
+}
+.numberheading{
+    display: inline;
+    position: absolute;
+    padding-top: 20px;
+    font-size: 16px;
+    padding-left: 20px;
+}
+
+.numberheading > p{
+   padding-top: 10px; 
+   font-size: 12px !important;
+}
+
+.numberheading > ul {
+    padding-top: 10px;
+}
+.numberheading > ul >li >a{
+   font-size: 12px !important;
+}
+
+.step1{
+    padding-bottom: 60px;
+}
+.step1 > input{
+ font-size: 12px;
+}
+
+.btncreatecoll{
+    background: #00abec;
+    color:black;
+    padding: 0 20px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.btncreatecoll:hover{
+    background: #00abec;
+    color:black;
+    border-color: #00abec;
+    cursor: pointer;
+    font-size: 12px;
+}
+.hrline{
+ color: #d6d7d8;
+}
+.atags {
+    color: #00abec;
+    font-weight: 400;
+    cursor: pointer
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.qsmenuicons {
+     width: 25px;
+    height: 25px;
+    margin-right: 5px;
+}
+
+/* End Quick start style*/
+
+/*explorer styles*/
+
+/*header black and white*/
+.HeaderBg {
+    background-color: #1a1a1a;
+    height: 100px;
+}
+
+.title {
+    color: #00abec;
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+.DocDBicon {
+    padding-bottom: 10px;
+    width: 32px;
+    /* padding-top:20px; */
+}
+
+.items {
+    padding-left: 24px;
+    padding-top: 15px;
+}
+
+.divmenuquickstartpadding {
+    padding-left: 24px;
+    padding-bottom: 8px;
+}
+
+.menuQuickStart {
+    font-size: 16px;
+    color: white;
+}
+
+.menuExplorer {
+    padding-left: 28px;
+    font-size: 16px;
+    color: whitesmoke;
+}
+
+.activemenu{
+    color: #00abec;
+} 
+
+.rightarrowimg {
+    padding-left: 20px;
+    padding-bottom: 3px;
+}
+
+
+.createdocdbacnt {
+    color: #a5ce00;
+    position: absolute;
+    right: 25px;
+    font-size: 18px;
+     text-decoration: none;
+}
+.createdocdbacnt:hover, .createdocdbacnt:visited, .createdocdbacnt:active  {
+    color: #a5ce00;
+    position: absolute;
+    right: 25px;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+a:hover, a:visited, a:active, a:link {
+    text-decoration: none;  
+}
+
+.commandBar {
+    background-color: lightgray;
+    padding: 10px;
+}
+
+.command {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0 20px;
+}
+    .command:hover {
+        cursor: pointer;
+    }
+
+.commandIcon {
+    margin: 0 5px 0 0;
+    vertical-align: text-top;
+}
+
+.iconpadclick {
+    background-color: #e6e6e6;
+    cursor: pointer;
+    border: 1px solid #1ebbee;
+    padding: 5px;
+}
+
+/*header black and white*/
+
+/* side bar styles*/
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: white;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+/*button main slide arrow */
+.divimgleftarrow {
+    display: inline-block;
+    margin-top: 16px;
+    margin-right: 10px;
+}
+
+    .divimgleftarrow:hover {
+        background-color: #e6e6e6;
+        cursor: pointer;
+        border: 1px solid #1ebbee;
+    }
+
+
+
+.adddeliconspan{
+    display:none;
+     float:right;
+    padding:5px;
+}
+.spanparent:hover .adddeliconspan{
+    display:inline;   
+}
+
+.spanchild:hover .adddeliconspan{
+    display:inline;   
+}
+
+.collectiontitle{
+    font-size: 16px;
+    padding: 10px 0;
+    border-bottom: solid 1px lightgray;
+}
+
+.coltitle{
+    background: white;
+    text-align: justify;
+}
+
+.titlepadcol{
+     padding-left: 20px;
+}
+
+.padimgcolrefresh{
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.refreshcol{
+    cursor: pointer;
+    width: 14px;
+    height:14px;
+}
+
+.btnmainslide {
+    height: 14px;
+    margin-top: 14px;
+    cursor: pointer;
+}
+
+/*tree styles*/
+
+.well {
+    padding: 19px 0px;
+    padding-top: 0px;
+    margin-bottom: 20px;
+    border: 0px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0);
+    background: white;    
+    height:75vh;
+    overflow-y: auto;
+}
+
+.tree li {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px 0px 0 0px;
+    position: relative;
+}
+
+    .tree li::before, .tree li::after {
+        content: '';
+        left: -20px;
+        position: absolute;
+        right: auto;
+    }
+
+    .tree li::before {
+        /*border-left: 1px solid #999;*/
+        bottom: 50px;
+        height: 100%;
+        top: 0;
+        width: 1px;
+    }
+
+    .tree li::after {
+        /*border-top: 1px solid #999;*/
+        height: 20px;
+        top: 25px;
+        width: 25px;
+    }
+
+    .tree li span {
+        /*-moz-border-radius: 5px;
+                    -webkit-border-radius: 5px;
+                    border: 1px solid #999;
+                    border-radius: 5px;*/
+        display: block;
+        /*padding: 3px 8px;*/
+        text-decoration: none;
+        padding: 2px 19px;
+    }
+
+    .tree li.parent_li > span {
+        cursor: pointer;
+    }
+
+.tree > ul > li::before, .tree > ul > li::after {
+    border: 0;
+}
+
+.tree li:last-child::before {
+    height: 30px;
+}
+
+.tree li.parent_li > span:hover {
+    background-color: #e6e6e6;
+    font-weight: 500;
+    color: #000;
+    cursor: pointer;
+    /*height:40px;*/
+}
+
+.tree li#lisubtree > span:hover {
+    background-color: #e6e6e6;
+    font-weight: 500;
+    color: #000;
+    cursor: pointer;
+    /*height:40px;*/
+}
+
+.imgarrowstyle {
+    height: 10px;
+    width: 10px;
+    margin-right: 10px;
+}
+
+.imgdocdb {
+    height: 18px;
+    width: 18px;
+    margin-right: 5px;
+}
+
+#spandbstyle {
+    font-size: 18px;
+    display: inline;
+    vertical-align: middle;
+}
+
+.imgdoccol {
+    height: 18px;
+    width: 18px;
+    margin-right: 5px;
+    margin-left: 36px;
+}
+
+#spancolstyle {
+    font-size: 16px;
+    display: inline;
+    vertical-align: middle;
+}
+/*End of tree styles*/
+
+/*Document tab styles*/
+
+.level {
+    padding-left: 20px;
+    padding-top: 50px;
+}
+
+
+.spanmenupaddingleft {
+    padding-left: 30px;
+}
+
+.spanmenu {
+    margin-right: 24px;
+    font-size: 16px;
+    display: inline;
+    padding: 5px;
+}
+
+    .spanmenu:hover {
+        background-color: #e6e6e6;
+        cursor: pointer;
+    }
+
+.spanmenuclick {
+    background-color: #e6e6e6;
+    cursor: pointer;
+    border: 1px solid #1ebbee;
+    padding: 5px;
+}
+
+#imgiconwidth {
+    width: 20px;
+    margin-right: 10px;
+}
+
+/*vertical line*/
+.activescreen {
+    background-color: white;
+}
+/*explorer styles*/
+
+/*mini slide styles*/
+
+.main-nav {
+    width: 100vh;
+    height: 45px;
+    background: white;
+    -webkit-transform-origin: left top;
+    -webkit-transform: rotate(-90deg) translateX(-100%);
+}
+
+ul.nav {
+    margin: 0 auto;
+    margin-top: 0px;
+}
+
+     .mini ul.nav li {
+        float: right;
+        line-height: 25px;
+        height: auto;
+    }
+
+/*table styles*/
+.tab-content {
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.tabdocuments {
+    height: 100vh;
+}
+
+.table-fixed thead {
+    width: 97%;
+    padding-left: 18px;
+}
+
+.table-fixed tbody {
+    height: 510px;
+    overflow-y: auto;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.table-fixed thead, .table-fixed tbody, .table-fixed tr, .table-fixed td, .table-fixed th {
+    display: block;
+}
+
+    .table-fixed tbody td, .table-fixed thead > tr > th {
+        float: left;
+        border-bottom-width: 0;
+    }
+
+.createdocdbacnt {
+    color: #a5ce00;
+    position: absolute;
+    right: 25px;
+    font-size: 18px;
+     text-decoration: none;
+}
+.createdocdbacnt:hover, .createdocdbacnt:visited, .createdocdbacnt:active  {
+    color: #a5ce00;
+    position: absolute;
+    right: 25px;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+a:hover,a:visited, a:active, a:link {
+    text-decoration: none;  
+} 
